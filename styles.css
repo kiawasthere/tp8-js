@@ -9,6 +9,7 @@
   height: 80vh;
   position: relative;
   margin: 10vh auto;
+  box-shadow: 6px
 }
 
 .card {
@@ -50,6 +51,15 @@
 
 .pic2 .cardFront {
   background-image: url(images/coffee.png);
+  background-size: cover;
+}
+
+.pic3 .cardFront {
+  background-image: url(images/house.png);
+  background-size: cover;
+}
+.pic4 .cardFront {
+  background-image: url(images/monster.png);
   background-size: cover;
 }
 

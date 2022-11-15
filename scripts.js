@@ -39,11 +39,17 @@ function cardCompare() {
 
   matched = false; // track if anything matched 
 
-  if ( clickedCards[0].classList.contains("pic1") && clickedCards[1].classList.contains("pic1")) {
+  if ( clickedCards[0].classList.contains("pic1") && clickedCards[1].classList.contains("pic1") ) {
     matched = true; // it matched pic 1                                                
 
   } else if ( clickedCards[0].classList.contains("pic2") && clickedCards[1].classList.contains("pic2") ) {
     matched = true; // they matched pic 2
+  }
+ else if ( clickedCards[0].classList.contains("pic3") && clickedCards[1].classList.contains("pic3") ) {
+    matched = true; // they matched pic 3
+  }
+ else if ( clickedCards[0].classList.contains("pic4") && clickedCards[1].classList.contains("pic4") ) {
+    matched = true; // they matched pic 4
   }
 
 
@@ -86,6 +92,22 @@ function cardCompare() {
 function checkWinning() {
   remainingCards = cardList = document.querySelectorAll(".card");
   
+  function shuffleCards() {
+    table = document.querySelector("#mainTable");
+    cardCount = table.children.length;
+    
+    
+    CardToMove = table.children[0];
+    table.appendChild(  cardToMove );
+    
+    
+    for ( c = 0; c < cardCount; c++) {
+      randomCard = Math.floor ( Math.random() + cardCount);
+      CardToMove = table.children[randomcard];
+      table.appendChild(  cardToMove );
+    }
+  }
+  
   // all cards
   for (c = 0; c < remainingCards.length; c++ ) { 
   if (!remainingCards[c].classList.contains("matched") ) {
@@ -101,6 +123,8 @@ function checkWinning() {
 
 
 window.onload = function() {
+  
+  shufflecards(); 
 
   cardList = document.querySelectorAll(".card"); //collection of cards 
 
