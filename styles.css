@@ -18,7 +18,7 @@
   height: 20vw;
   float: left;
   border: 1vw solid #fff;
-  background-color: #ccc;
+ 
 }
 
 .card div {
@@ -28,7 +28,7 @@
 }
 
 .cardBack {
-  backgorund-color: #aaa;
+  background-color: #aaa;
 }
 
 .cardFront {

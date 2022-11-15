@@ -89,24 +89,28 @@ function cardCompare() {
 }
 
 
-function checkWinning() {
-  remainingCards = cardList = document.querySelectorAll(".card");
-  
-  function shuffleCards() {
+ function shuffleCards() {
     table = document.querySelector("#mainTable");
     cardCount = table.children.length;
     
     
     CardToMove = table.children[0];
-    table.appendChild(  cardToMove );
+    table.appendChild(  CardToMove );
     
     
     for ( c = 0; c < cardCount; c++) {
-      randomCard = Math.floor ( Math.random() + cardCount);
-      CardToMove = table.children[randomcard];
-      table.appendChild(  cardToMove );
+      randomCard = Math.floor ( Math.random() * cardCount);
+      CardToMove = table.children[randomCard];
+      table.appendChild(  CardToMove );
     }
-  }
+
+ }
+
+function checkWinning() {
+  remainingCards = cardList = document.querySelectorAll(".card");
+  
+ 
+  
   
   // all cards
   for (c = 0; c < remainingCards.length; c++ ) { 
@@ -124,7 +128,7 @@ function checkWinning() {
 
 window.onload = function() {
   
-  shufflecards(); 
+  shuffleCards(); 
 
   cardList = document.querySelectorAll(".card"); //collection of cards 
 
