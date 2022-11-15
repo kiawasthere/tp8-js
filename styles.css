@@ -1,71 +1,58 @@
 /* CSS code for memory card game - TP8-JS */
 
-
-*   {
-  box-sizing: border-box;   
-  
+* {
+  box-sizing: border-box;
 }
 
 #mainTable {
-  width: 80vw; 
-  height: 80vh; 
-  position: relative; 
-  margin: 10vh auto; 
-  
+  width: 80vw;
+  height: 80vh;
+  position: relative;
+  margin: 10vh auto;
 }
 
 .card {
-  position: relative; 
+  position: relative;
   width: 20vw;
   height: 20vw;
-  float: left; 
-  border: 1vw solid #fff; 
-  background-color: #ccc; 
-  
+  float: left;
+  border: 1vw solid #fff;
+  background-color: #ccc;
 }
+
 .card div {
-  position absolute;
+  position: absolute;
   width: 100%;
   height: 100%;
-  
-  
 }
 
-
-.cardBack{
- backgorund-color: #aaa;  
-  
+.cardBack {
+  backgorund-color: #aaa;
 }
 
 .cardFront {
-  background-color: #333; 
-  display: none; 
-  
+  background-color: #333;
+  display: none;
 }
 
 .clicked .cardBack {
-  display: none; 
-  
+  display: none;
 }
 
 .clicked .cardFront {
-  display: block; 
+  display: block;
 }
 
-
 .pic1 .cardFront {
-  background-image: url(images/anime.png);  
-  background-size: cover; 
+  background-image: url(images/anime.png);
+  background-size: cover;
 }
 
 .pic2 .cardFront {
-  background-image: url(images/coffee.png);  
-  background-size: cover; 
+  background-image: url(images/coffee.png);
+  background-size: cover;
 }
 
-.removed {
+.card.matched div {
   display: none;
-  
 }
-
-
